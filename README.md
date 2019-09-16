@@ -1,4 +1,5 @@
-== UnityICEStatus ==
+UnityICEStatus
+==============
 
 Just for fun; this behaviour queries the API used by the ICE portal if connected to the ICE WiFi of Deutsche Bahn trains. The API provides information about the current trip as well as status information (like current speed or current position). The information is polled every 5 seconds which seems to be roughly the update rate.
 
@@ -8,7 +9,8 @@ I still decided to publish this MonoBehaviour for fun and exploration. Some info
 
 Of course Deutsche Bahn could decide at any moment to change their API. In that case this MonoBehaviour will cease to work. 
 
-==  Usage ==
+Usage
+-----
 
 Just drop the object onto an object in Unity. Once started it will continously try to query the API and update its public properties. The **status** and **tripInfo** property reflects the raw data of the API. All other public properties can be used for convenience. 
 
@@ -16,6 +18,7 @@ There are also several UnityEvents you can subscribe to.
 
 For further information please consult the source code.
 
-== Files ==
+Files
+-----
 
 The C# files can be directly used on Unity objects. The StreamingAssets folder can be used to mock input when not in a train (set useTestData to true in the Start method.)
